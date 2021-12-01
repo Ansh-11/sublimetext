@@ -1,0 +1,16 @@
+{  
+   "shell_cmd": "konsole -e zsh -c \"g++ $file_name; echo -------------output--------------; ./a.out;echo;echo      Press ENTER to continue; read line;exit; exec zsh\"",
+   "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+   "selector": "source.c++,source.cpp",
+   "variants":
+    [
+        {
+            "name": "Windows",
+            "shell_cmd": "g++  \"${file}\" -std=c++17 -o \"${file_path}/${file_base_name}\" && \"${file_path}/${file_base_name}\""
+        },
+        {
+            "name": "Runfile",
+            "shell_cmd": "g++ \"$file\"&& ./a.out<input.txt>output.txt",
+        }
+    ]
+}

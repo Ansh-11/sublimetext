@@ -1,0 +1,6 @@
+{	
+   "shell_cmd": "gnome-terminal -- bash -c \"gcc  -std=c18 $file_name -Wall -Werror -Wextra -pedantic -lm -fwrapv ;echo -------------output--------------; ./a.out;echo;echo      Press ENTER to continue; read line;exit; exec bash\"",
+   "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+   "selector": "source.c",
+}
+ 

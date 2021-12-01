@@ -1,0 +1,14 @@
+{   
+   "shell_cmd": "konsole -e zsh -c \"gjavac \"$file\"; echo -------------output--------------; java \"$file_base_name\";echo;echo      Press ENTER to continue; read line;exit; exec zsh\"",
+    "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+    "working_dir" : "$file_path",
+    "selector": "source.java",
+    "variants":
+    [
+        {
+            "name": "Runfile",
+            "shell_cmd": "javac \"$file\"&& java \"$file_base_name\"<input.txt>output.txt",
+        }
+    ]
+}
+ 
